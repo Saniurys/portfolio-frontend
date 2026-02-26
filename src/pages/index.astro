@@ -1,17 +1,26 @@
 ---
-
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/react/Hero/Hero';
+import Skills from '../components/react/Skills/Skills';
+import Experience from '../components/react/Experience';
+import Education from '../components/react/Education';
+import Projects from '../components/react/Projects';
+import Contact from '../components/react/Contact/Contact';
+// Cuando tengas el de Proyectos, lo importarás aquí también
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Saniurys | Senior Frontend Engineer">
+    
+<Hero client:load />
+
+<Skills client:visible />
+
+<Experience client:visible />
+
+<Education client:visible />
+
+<Projects client:visible />
+
+<Contact client:visible />
+
+</MainLayout>
